@@ -171,7 +171,7 @@ generateButton.addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch('http://localhost:3000/generate-slogans', { // Ensure URL is correct
+        const response = await fetch('/generate-slogans', { // Ensure URL is correct
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ description, variants, tone }),
