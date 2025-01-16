@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import fetch from "node-fetch";
 
 const app = express();
-const PORT = 3000;
+const PORT = 80;
 
 // Replace with your Gemini API key
 const GEMINI_API_KEY = "AIzaSyC4N2-8iJo75_yw6Yhzcdf0RVTvKNuv6KM";
