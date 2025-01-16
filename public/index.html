@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Slogan Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Free AI Slogan Generator</div>
+            <div class="nav-right">
+                <select id="languageSelect" class="language-select">
+                    <option value="en">English</option>
+                    <option value="zh">简体中文</option>
+                </select>
+                <button class="sign-up-btn" id="signUpBtn">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1 class="title" data-en="Free AI Slogan Generator" data-zh="免费 AI 标语生成器">Free AI Slogan Generator</h1>
+        <p class="subtitle" data-en="Use this powerful tool to create memorable, catchy slogans that capture the essence of your brand and leave a lasting impression." data-zh="使用这个强大的工具来创建令人难忘的朗朗上口的标语，捕捉品牌精髓并留下持久的印象。">
+            Use this powerful tool to create memorable, catchy slogans that capture the essence of your brand and leave a lasting impression.
+        </p>
+
+        <div class="generator-container">
+            <div class="input-section">
+                <label data-en="I want a slogan for..." data-zh="我想要一个标语为...">I want a slogan for...</label>
+                <textarea id="sloganInput" rows="4"></textarea>
+            </div>
+            <div id="generatedSlogans" class="generated-slogans">
+                <!-- Slogans will be dynamically inserted here -->
+            </div>
+
+            <div class="controls">
+                <div class="format-section">
+                    <button class="format-btn">
+                        <span data-en="Format" data-zh="格式">Format</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                </div>
+
+                <div class="generate-section">
+                    <label data-en="Generate" data-zh="生成">Generate</label>
+                    <select class="variants-select">
+                        <option value="5">5 variants</option>
+                        <option value="10">10 variants</option>
+                        <option value="15">15 variants</option>
+                    </select>
+                </div>
+
+                <div class="explain-section">
+                    <label class="switch">
+                        <input type="checkbox" id="explainToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span data-en="Explain meaning" data-zh="解释含义">Explain meaning</span>
+                </div>
+            </div>
+
+            <button class="generate-btn">
+                <span class="icon">✨</span>
+                <span data-en="Generate Slogan Ideas" data-zh="生成标语创意">Generate Slogan Ideas</span>
+            </button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
