@@ -17,6 +17,16 @@ body {
     color: var(--text-color);
     min-height: 100vh;
 }
+
+.navbar {
+    background-color: #2b3544;
+    padding: 2rem 2rem;
+    color: var(--white);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -34,29 +44,14 @@ body {
     width: auto;
 }
 
-.navbar {
-    background-color: #2b3544;
-    padding: 1rem 2rem;
-    color: var(--white);
-}
-
-.nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
 .nav-right {
     display: flex;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
+    position: absolute;
+    right: 1rem; /* Places navigation elements on the right */
+    top: 50%; /* Vertically centers the elements */
+    transform: translateY(-50%);
 }
 
 .language-select {
@@ -65,6 +60,11 @@ body {
     border: 1px solid #ccc;
     background-color: transparent;
     color: var(--white);
+    appearance: none;
+    padding-right: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
 }
 
 .sign-up-btn {
@@ -76,6 +76,12 @@ body {
     cursor: pointer;
     font-weight: 500;
 }
+
+.sign-up-btn:hover {
+    background-color: #ffa54d;
+    transform: scale(1.05);
+}
+
 
 .main-content {
     max-width: 800px;
@@ -138,6 +144,12 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.format-btn:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
 }
 
 .variants-select {
@@ -212,14 +224,15 @@ input:checked + .slider:before {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .generate-btn:hover {
-    opacity: 0.9;
+    background-color: #ffa54d;
+    transform: scale(1.05);
 }
 
-/* Add these styles to your existing style.css */
-
+/* Dropdown menu style for format */
 .format-dropdown {
     position: relative;
     display: inline-block;
@@ -230,7 +243,7 @@ input:checked + .slider:before {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
+    background-color: var(--white);
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -256,6 +269,7 @@ input:checked + .slider:before {
     background-color: #f5f6f8;
 }
 
+/* Custom format section */
 .custom-format {
     display: none;
     margin-top: 8px;
@@ -296,6 +310,7 @@ input:checked + .slider:before {
     color: var(--white);
 }
 
+/* Generated slogans container */
 .generated-slogans {
     margin-top: 20px;
     padding: 15px;
