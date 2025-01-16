@@ -8,8 +8,7 @@ const PORT = 3000;
 
 // Replace with your Gemini API key
 const GEMINI_API_KEY = "AIzaSyC4N2-8iJo75_yw6Yhzcdf0RVTvKNuv6KM";
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}';
-
+const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + GEMINI_API_KEY;
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
