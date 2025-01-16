@@ -17,6 +17,22 @@ body {
     color: var(--text-color);
     min-height: 100vh;
 }
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    position: absolute;
+    left: 1rem; /* Adjustment to place the logo from the very left */
+    top: 50%; /* Center logo vertically */
+    transform: translateY(-50%);
+    height: auto; /* Changed to auto for better scaling */
+    z-index: 1000; /* Ensures the logo is on top and not overlapped */
+}
+
+.logo img {
+    height:160px;/* Limit logo image height for consistency */
+    width: auto;
+}
 
 .navbar {
     background-color: #2b3544;
