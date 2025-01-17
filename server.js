@@ -72,6 +72,6 @@ app.post("/generate-slogans", async (req, res) => {
 });
 
 // <— FIX: use quotes/backticks in console.log
-app.listen(3000, '127.0.0.1', () => {
-    console.log('Server is running at http://127.0.0.1:3000');
+app.listen(3000, '0.0.0.0', () => { 
+    console.log('Server is running on port 3000');
 });
