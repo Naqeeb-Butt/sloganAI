@@ -200,3 +200,25 @@ generateButton.addEventListener('click', async () => {
         alert('An error occurred while generating slogans. Please try again later.');
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const userPanel = document.getElementById("userPanel");
+    const authButtons = document.getElementById("authButtons");
+    const usernameSpan = document.getElementById("username");
+
+    // Simulating sign-in and sign-out
+    window.signIn = () => {
+        // Replace with actual authentication logic
+        const username = prompt("Enter your username");
+        if (username) {
+            usernameSpan.textContent = `Hello, ${username}`;
+            userPanel.classList.remove("hidden");
+            authButtons.classList.add("hidden");
+        }
+    };
+
+    window.logout = () => {
+        userPanel.classList.add("hidden");
+        authButtons.classList.remove("hidden");
+    };
+});
